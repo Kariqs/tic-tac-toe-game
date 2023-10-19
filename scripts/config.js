@@ -1,5 +1,5 @@
 function openPlayerConfig(event) {
-  editedPlayer = +event.target.getAttribute('data-player-id');
+  editedPlayer = +event.target.getAttribute("data-player-id");
 
   configOverlay.style.display = "block";
   backDrop.style.display = "block";
@@ -10,6 +10,7 @@ function cancelPlayerConfig() {
   backDrop.style.display = "none";
   formElement.children[0].classList.remove("error");
   errorOutputElement.textContent = "";
+  playerNameInput.textContent = "";
 }
 
 function savePlayerConfig(event) {
@@ -24,11 +25,11 @@ function savePlayerConfig(event) {
   }
 
   const updatedPlayerDataElement = document.getElementById(
-    "player-"+editedPlayer+"-data"
+    "player-" + editedPlayer + "-data"
   );
   updatedPlayerDataElement.children[1].textContent = enteredPlayerName;
 
-   players[editedPlayer - 1].name = enteredPlayerName;
+  players[editedPlayer - 1].name = enteredPlayerName;
 
-   cancelPlayerConfig();
+  cancelPlayerConfig();
 }
