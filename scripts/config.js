@@ -10,7 +10,7 @@ function cancelPlayerConfig() {
   backDrop.style.display = "none";
   formElement.children[0].classList.remove("error");
   errorOutputElement.textContent = "";
-  playerNameInput.textContent = "";
+  playerNameInput.value = "";
 }
 
 function savePlayerConfig(event) {
